@@ -1,0 +1,21 @@
+Script to dump a graphviz of the models with properties, methods and references of your projects.
+
+There is some code borrow from the django helper and django-extensions
+
+Hope you like!
+
+Sebastian, devsar.com
+
+HOW TO USE:
+$ python modelviz.py test.models > test/models.dot
+
+THEN:
+
+$ dot test/models.dot -Tsvg -o test/models.svg
+OR
+$ dot test/models.dot -Tpng -o test/models.png
+
+
+TIP: you may have to do a symbolic link to your app engine sdk like:
+$ ln -s path_to_google_appengine .google_appengine
+
