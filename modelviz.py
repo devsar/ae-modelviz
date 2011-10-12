@@ -159,6 +159,7 @@ HEAD_TEMPLATE = """
 digraph name {
   fontname = "Helvetica"
   fontsize = 8
+  rankdir = "BT"
 
   node [
     fontname = "Helvetica"
@@ -201,7 +202,7 @@ subgraph {{ module_name }} {
      {% endfor %}
      {% endif %}
     </TABLE>
-    >]
+    >, weight={% if model.parent %}2{% else %}1{% endif %}]
 {% endfor %}
 }
 """

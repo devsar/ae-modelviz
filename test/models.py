@@ -10,11 +10,17 @@ class Owner(db.Model):
   
 
 class Vehicle(polymodel.PolyModel):
-  owner = db.ReferenceProperty(Owner)
   model = db.StringProperty()
 
 class Car(Vehicle):
-  doors = db.StringProperty()
+  owner = db.ReferenceProperty(Owner)
+  doors = db.IntegerProperty()
 
+
+class Truck(Vehicle):
+  tare = db.IntegerProperty()
+
+class Ship(Vehicle):
+  hulls = db.IntegerProperty()
   
 
